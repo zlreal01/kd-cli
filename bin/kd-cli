@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+const program = require('commander')
+
+// 定义当前版本
+// 定义使用方法
+// 定义四个指令
+program
+  .version(require('../package').version)
+  .usage('<command> [options]')
+  .command('kd-cli-list', '列出可以使用的模板')
+  .command('kd-cli-init', '使用模板创建一个工程，命令格式：kd-cli-init 模板名称 工程名字，示例：kd-cli-init create-mobile-template test')
+  
+// 解析命令行参数
+program.parse(process.argv)
